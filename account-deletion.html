@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DynAcademy — Hesap Silme</title>
+  <meta name="description" content="DynAcademy uygulamasında hesabınızı nasıl sileceğinizi ve hangi verilerin silindiğini açıklar." />
+  <style>
+    :root {
+      --bg: #0f1419;
+      --surface: #171d25;
+      --border: #2a3441;
+      --text: #e8edf2;
+      --muted: #9aa7b5;
+      --accent: #f15a29;
+      --accent-soft: rgba(241, 90, 41, 0.14);
+      --danger: #e74c3c;
+      --radius: 14px;
+      --max: 820px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+      background: radial-gradient(1200px 600px at 10% -10%, #2a1a12 0%, transparent 55%),
+                  radial-gradient(900px 500px at 100% 0%, #152033 0%, transparent 50%),
+                  var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      min-height: 100vh;
+    }
+    .wrap {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 28px 18px 64px;
+    }
+    .brand {
+      font-size: 0.8rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 700;
+      margin: 0 0 8px;
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(1.35rem, 3vw, 1.75rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+    .lead {
+      margin: 0 0 22px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+    .card {
+      background: color-mix(in srgb, var(--surface) 92%, transparent);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 22px 20px 28px;
+    }
+    .meta {
+      display: grid;
+      gap: 8px;
+      margin: 0 0 22px;
+      padding: 14px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+    .meta-item {
+      display: grid;
+      grid-template-columns: minmax(120px, 180px) 1fr;
+      gap: 8px;
+      font-size: 0.9rem;
+    }
+    .meta-label { color: var(--muted); }
+    .meta-value { color: var(--text); font-weight: 500; }
+    section { margin: 0 0 22px; }
+    section h2 {
+      margin: 0 0 8px;
+      font-size: 1.05rem;
+      color: #fff;
+    }
+    p, li {
+      margin: 0 0 10px;
+      color: #c9d3dd;
+      font-size: 0.95rem;
+    }
+    ol, ul { margin: 0 0 10px; padding-left: 1.25rem; }
+    li { margin-bottom: 6px; }
+    .note {
+      margin: 0 0 16px;
+      padding: 12px 14px;
+      background: var(--accent-soft);
+      border-left: 3px solid var(--accent);
+      border-radius: 8px;
+      color: #d7dee6;
+      font-size: 0.95rem;
+    }
+    .warn {
+      margin: 0 0 16px;
+      padding: 12px 14px;
+      background: rgba(231, 76, 60, 0.12);
+      border-left: 3px solid var(--danger);
+      border-radius: 8px;
+      color: #f0d0cc;
+      font-size: 0.95rem;
+    }
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 0 0 22px;
+    }
+    .nav a {
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+    .nav a:hover { text-decoration: underline; }
+    footer {
+      margin-top: 28px;
+      color: var(--muted);
+      font-size: 0.82rem;
+      text-align: center;
+    }
+    footer a { color: var(--accent); }
+    @media (max-width: 560px) {
+      .meta-item { grid-template-columns: 1fr; gap: 2px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <p class="brand">DynAcademy</p>
+    <h1>Hesap silme talebi</h1>
+    <p class="lead">
+      Bu sayfa, DynAcademy mobil uygulamasında hesabınızı nasıl sileceğinizi,
+      hangi verilerin silindiğini ve kulüp sahipleri için ek adımları açıklar.
+    </p>
+
+    <div class="nav">
+      <a href="./index.html">Yasal belgeler</a>
+      <a href="./legal.html#gizlilik">Gizlilik Politikası</a>
+      <a href="./legal.html#sozlesme">Üyelik Sözleşmesi</a>
+    </div>
+
+    <article class="card">
+      <div class="meta">
+        <div class="meta-item">
+          <span class="meta-label">Uygulama</span>
+          <span class="meta-value">DynAcademy (com.dynacademy.app)</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Yürürlük</span>
+          <span class="meta-value">5 Nisan 2026</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">İletişim</span>
+          <span class="meta-value">dynacademy.app@gmail.com</span>
+        </div>
+      </div>
+
+      <p class="note">
+        Hesap silme işlemi uygulama içinden yapılır. Google Play / App Store
+        hesap silme gereksinimi kapsamında bu sayfa, sürecin kamuya açık
+        açıklamasıdır.
+      </p>
+
+      <section>
+        <h2>1. Uygulama içinden hesap silme</h2>
+        <p>Hesabınıza giriş yaptıktan sonra rolünüze göre şu yolu izleyin:</p>
+        <ul>
+          <li><strong>Üye:</strong> Ayarlar → Hesap güvenliği → Hesabı sil</li>
+          <li><strong>Antrenör / personel:</strong> Profil → Hesap güvenliği → Hesabı sil</li>
+          <li><strong>Kulüp yöneticisi:</strong> Profil → Yetkili Profili → Hesap güvenliği → Hesabı sil</li>
+          <li><strong>Süper yönetici:</strong> Profil → Hesap güvenliği → Hesabı sil</li>
+        </ul>
+        <ol>
+          <li>Onay ekranında işlemi kabul edin.</li>
+          <li>Mevcut şifrenizi girerek kimliğinizi doğrulayın.</li>
+          <li>Hesabınız silinir ve oturumunuz kapatılır.</li>
+        </ol>
+      </section>
+
+      <section>
+        <h2>2. Kulüp sahipleri için ek adım</h2>
+        <p class="warn">
+          Açık (aktif) bir kulübün sahibiyseniz hesabınızı doğrudan silemezsiniz.
+          Önce kulübü kapatmanız gerekir.
+        </p>
+        <ol>
+          <li>Profil → Yetkili Profili → Hesap güvenliği → <strong>Kulübü kapat</strong></li>
+          <li>Uyarıları okuyup onaylayın.</li>
+          <li>Kulüp adını birebir yazarak işlemi doğrulayın.</li>
+          <li>Kulüp soft-close edilir; üyeler ve personel kulüpten ayrılır, faturalama durur.</li>
+          <li>Ardından <strong>Hesabı sil</strong> adımını tamamlayın.</li>
+        </ol>
+        <p>
+          Kapatılmış kulübün yeniden açılması destek / platform yönetimi
+          üzerinden yapılır.
+        </p>
+      </section>
+
+      <section>
+        <h2>3. Silinen veriler</h2>
+        <p>Hesap silindiğinde tipik olarak şunlar kaldırılır:</p>
+        <ul>
+          <li>Giriş hesabı (kimlik doğrulama kaydı)</li>
+          <li>Üye / personel profil kaydı</li>
+          <li>Oturum ve hesapla doğrudan bağlı kişisel bilgiler</li>
+        </ul>
+        <p>
+          Yasal saklama yükümlülükleri kapsamında erişim logları gibi bazı
+          kayıtlar, Gizlilik Politikası’nda belirtilen sürelerle (ör. hesap
+          silindikten sonra belirli bir süre) tutulabilir; süre sonunda silinir
+          veya anonimleştirilir.
+        </p>
+      </section>
+
+      <section>
+        <h2>4. Uygulamaya erişemiyorsanız</h2>
+        <p>
+          Cihazınıza veya hesabınıza erişemiyorsanız e-posta ile talepte bulunabilirsiniz:
+        </p>
+        <ul>
+          <li>Alıcı: <strong>dynacademy.app@gmail.com</strong></li>
+          <li>Konu: <strong>Hesap silme talebi</strong></li>
+          <li>İçerik: Kayıtlı e-posta adresiniz, ad soyad ve mümkünse kulüp adı</li>
+        </ul>
+        <p>
+          Kimlik doğrulaması sonrası talebiniz makul süre içinde sonuçlandırılır.
+          Kulüp sahibiyseniz önce kulüp kapatma sürecinin tamamlanması gerekebilir.
+        </p>
+      </section>
+
+      <section>
+        <h2>5. İlgili belgeler</h2>
+        <ul>
+          <li><a href="./legal.html#gizlilik">Gizlilik Politikası ve KVKK Aydınlatma Metni</a></li>
+          <li><a href="./legal.html#sozlesme">Üyelik ve Kullanım Sözleşmesi</a></li>
+        </ul>
+      </section>
+    </article>
+
+    <footer>
+      İletişim: <a href="mailto:dynacademy.app@gmail.com">dynacademy.app@gmail.com</a>
+      · <a href="https://www.dynacademy.com.tr" rel="noopener">www.dynacademy.com.tr</a>
+    </footer>
+  </div>
+</body>
+</html>
