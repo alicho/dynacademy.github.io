@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DynAcademy — Gizlilik Politikası & Üyelik Sözleşmesi</title>
+  <meta name="description" content="DynAcademy gizlilik politikası (KVKK) ve üyelik kullanım sözleşmesi." />
+  <style>
+    :root {
+      --bg: #0f1419;
+      --surface: #171d25;
+      --border: #2a3441;
+      --text: #e8edf2;
+      --muted: #9aa7b5;
+      --accent: #f06a2b;
+      --accent-soft: rgba(240, 106, 43, 0.14);
+      --radius: 14px;
+      --max: 820px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+      background: radial-gradient(1200px 600px at 10% -10%, #2a1a12 0%, transparent 55%),
+                  radial-gradient(900px 500px at 100% 0%, #152033 0%, transparent 50%),
+                  var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      min-height: 100vh;
+    }
+    .wrap {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 28px 18px 64px;
+    }
+    header {
+      margin-bottom: 22px;
+    }
+    .brand {
+      font-size: 0.8rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 700;
+      margin: 0 0 8px;
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(1.35rem, 3vw, 1.75rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+    .lead {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+    .tabs {
+      display: flex;
+      gap: 8px;
+      margin: 22px 0 18px;
+      padding: 6px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+    }
+    .tab {
+      flex: 1;
+      border: 0;
+      background: transparent;
+      color: var(--muted);
+      font: inherit;
+      font-weight: 600;
+      font-size: 0.92rem;
+      padding: 12px 14px;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: background .15s, color .15s;
+    }
+    .tab:hover { color: var(--text); }
+    .tab[aria-selected="true"] {
+      background: var(--accent-soft);
+      color: #fff;
+      box-shadow: inset 0 0 0 1px rgba(240,106,43,.35);
+    }
+    .panel { display: none; }
+    .panel.active { display: block; }
+    .card {
+      background: color-mix(in srgb, var(--surface) 92%, transparent);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 22px 20px 28px;
+      backdrop-filter: blur(8px);
+    }
+    .doc-title {
+      margin: 0 0 14px;
+      font-size: 1.15rem;
+      font-weight: 700;
+    }
+    .meta {
+      display: grid;
+      gap: 8px;
+      margin: 0 0 22px;
+      padding: 14px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+    .meta-item {
+      display: grid;
+      grid-template-columns: minmax(120px, 160px) 1fr;
+      gap: 8px;
+      font-size: 0.9rem;
+    }
+    .meta-label { color: var(--muted); }
+    .meta-value { color: var(--text); font-weight: 500; }
+    section { margin: 0 0 20px; }
+    section h2 {
+      margin: 0 0 8px;
+      font-size: 1.02rem;
+      color: #fff;
+    }
+    p {
+      margin: 0 0 10px;
+      color: #c9d3dd;
+      font-size: 0.95rem;
+    }
+    p.intro {
+      color: #d7dee6;
+      padding: 12px 14px;
+      background: var(--accent-soft);
+      border-left: 3px solid var(--accent);
+      border-radius: 8px;
+    }
+    footer {
+      margin-top: 28px;
+      color: var(--muted);
+      font-size: 0.82rem;
+      text-align: center;
+    }
+    a { color: var(--accent); }
+    @media (max-width: 560px) {
+      .meta-item { grid-template-columns: 1fr; gap: 2px; }
+      .tab { font-size: 0.82rem; padding: 11px 8px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <p class="brand">DynAcademy</p>
+      <h1>Yasal belgeler</h1>
+      <p class="lead">Gizlilik politikası ve üyelik sözleşmesini aşağıdaki sekmelerden inceleyebilirsiniz.</p>
+    </header>
+
+    <div class="tabs" role="tablist" aria-label="Yasal belgeler">
+      <button class="tab" role="tab" id="tab-privacy" aria-controls="panel-privacy" aria-selected="true" type="button">Gizlilik Politikası</button>
+      <button class="tab" role="tab" id="tab-agreement" aria-controls="panel-agreement" aria-selected="false" type="button">Üyelik Sözleşmesi</button>
+    </div>
+
+    <div id="panel-privacy" class="panel active" role="tabpanel" aria-labelledby="tab-privacy">
+      <article class="card">
+        <h2 class="doc-title">Gizlilik Politikası ve KVKK Aydınlatma Metni</h2>
+        <div class="meta"><div class="meta-item"><span class="meta-label">Yürürlük tarihi</span><span class="meta-value">5 Nisan 2026</span></div>
+<div class="meta-item"><span class="meta-label">Uygulama / Platform</span><span class="meta-value">dynacademy</span></div>
+<div class="meta-item"><span class="meta-label">Veri sorumlusu</span><span class="meta-value">Ali ÇOĞAN (Geliştirici)</span></div>
+<div class="meta-item"><span class="meta-label">İletişim</span><span class="meta-value">dynacademy.app@gmail.com</span></div>
+<div class="meta-item"><span class="meta-label">Web Adresi</span><span class="meta-value">www.dynacademy.com.tr</span></div></div>
+        <p class="intro">Bu metin, dynacademy mobil uygulaması, web uygulaması ve bunlarla bağlantılı hizmetler kapsamında kişisel verilerin hangi amaçlarla işlendiğini, kimlerle paylaşılabileceğini, ne kadar süreyle saklanabileceğini ve ilgili kişilerin haklarını açıklamak amacıyla hazırlanmıştır.</p>
+<p class="intro">Önemli not: dynacademy bir kulüp/tesis yönetim platformu olarak çalışabilir. Bu durumda sporcu/üye verilerinin hangi amaçla ve hangi yetkiyle işlendiğine ilişkin roller, somut hizmet modeline göre dynacademy ile kulüp/tesis arasında değişebilir. Bu metin, yayına alınmadan önce gerçek şirket bilgileri, veri işleme rolleri, kullanılan altyapılar ve güncel süreçler bakımından hukukçu tarafından kontrol edilmelidir.</p>
+<section><h2>1. Tanımlar</h2>
+<p>Platform: dynacademy mobil uygulaması, web uygulaması, yönetim paneli ve ilgili dijital hizmetlerin tamamını ifade eder.</p>
+<p>Kulüp: Platformu kullanarak sporcu/üye, antrenör, ders, rezervasyon, üyelik, ödeme veya benzeri süreçleri yöneten spor kulübü, spor okulu, stüdyo, salon veya diğer işletmeyi ifade eder.</p>
+<p>Kullanıcı: Platforma üye olan veya Platformu kullanan sporcu, veli, antrenör, kulüp yöneticisi, personel veya diğer yetkili kişiyi ifade eder.</p>
+<p>Kişisel veri: Kimliği belirli veya belirlenebilir gerçek kişiye ilişkin her türlü bilgiyi ifade eder.</p>
+<p>Özel nitelikli kişisel veri: KVKK kapsamında daha sıkı korumaya tabi olan verileri ifade eder; sağlık verileri bu kapsamda değerlendirilebilir.</p>
+</section>
+<section><h2>2. İşlenen Kişisel Veriler</h2>
+<p>Platformun özelliklerine göre aşağıdaki veri kategorileri işlenebilir:</p>
+<p>Kimlik bilgileri: ad, soyad, doğum tarihi ve gerekli durumlarda kimlik doğrulamaya ilişkin bilgiler.</p>
+<p>İletişim bilgileri: telefon numarası, e-posta adresi, adres ve iletişim tercihleri.</p>
+<p>Hesap ve güvenlik bilgileri: kullanıcı hesabı, rol, oturum bilgileri, şifrelenmiş kimlik doğrulama verileri, cihaz ve uygulama güvenliğiyle ilgili teknik kayıtlar.</p>
+<p>Kulüp ve üyelik bilgileri: kulüp/şube üyeliği, üyelik başlangıç-bitiş tarihleri, paket/hizmet bilgileri, ders ve rezervasyon kayıtları, devam durumu.</p>
+<p>Spor ve performans bilgileri: antrenman kayıtları, hedefler, ölçümler, vücut kompozisyonu ve ilerleme bilgileri. Bu bilgiler sağlık verisi niteliği taşıyabileceğinden ilgili özelliklerde KVKK&#x27;nın özel nitelikli veri kurallarına uygun süreçler uygulanır.</p>
+<p>İletişim ve bildirim kayıtları: uygulama içi mesajlar, bildirim tercihleri, hatırlatmalar ve iletişim geçmişi.</p>
+<p>Ödeme ve işlem bilgileri: ödeme durumu, tahakkuk, fatura/işlem referansı ve üyelik ücretlerine ilişkin kayıtlar. Kartın tam numarası veya CVV gibi ödeme kuruluşunun kendi sisteminde tutulması gereken bilgiler Platform tarafından tutulmaz; kullanılan ödeme hizmetinin teknik ve hukuki yapısına göre farklılık gösterebilir.</p>
+<p>Teknik bilgiler: IP adresi, cihaz modeli, işletim sistemi, uygulama sürümü, hata/crash kayıtları, push bildirim tanımlayıcıları ve güvenlik günlükleri.</p>
+<p>Görsel/medya bilgileri: kullanıcı tarafından profil veya kulüp süreçlerinde yüklenen fotoğraf/video gibi içerikler; yalnızca ilgili özelliğin kullanılması halinde.</p>
+</section>
+<section><h2>3. Kişisel Verilerin İşlenme Amaçları</h2>
+<p>Hesap oluşturmak, kimlik doğrulamak ve kullanıcı erişimini güvenli biçimde sağlamak.</p>
+<p>Kulüp üyeliği, şube, ders, antrenör, rezervasyon ve devam süreçlerini yürütmek.</p>
+<p>Antrenman, hedef ve gelişim kayıtlarını göstermek ve geçmişle karşılaştırma imkânı sunmak.</p>
+<p>Kulüplerin üyeleriyle operasyonel iletişim kurmasını ve bildirim göndermesini sağlamak.</p>
+<p>Ödeme, tahakkuk, üyelik ve muhasebe süreçlerine ilişkin kayıtları yönetmek.</p>
+<p>Uygulamanın güvenliğini sağlamak, kötüye kullanımı önlemek, hata ve performans sorunlarını tespit etmek.</p>
+<p>Kullanıcı desteği sağlamak ve talepleri sonuçlandırmak.</p>
+<p>Hizmeti geliştirmek, teknik istatistikler ve mümkün olduğunda anonimleştirilmiş/istatistiksel veriler oluşturmak.</p>
+<p>Kanuni yükümlülükleri yerine getirmek ve hukuki uyuşmazlıklarda hakların korunmasını sağlamak.</p>
+</section>
+<section><h2>4. Kişisel Verilerin İşlenmesinin Hukuki Sebepleri</h2>
+<p>Veriler; KVKK&#x27;nın 5. ve 6. maddelerinde düzenlenen hukuki sebeplerden somut işleme faaliyetine uygun olanına dayanılarak işlenir. Bunlar; sözleşmenin kurulması veya ifası, veri sorumlusunun hukuki yükümlülüğünün yerine getirilmesi, bir hakkın tesisi/kullanılması/korunması, meşru menfaat ve kanunda öngörülen diğer haller olabilir. Özel nitelikli veriler bakımından KVKK&#x27;nın güncel 6. maddesindeki şartlar ayrıca gözetilir.</p>
+<p>Açık rıza gereken durumlarda, ilgili faaliyet için açık rıza ayrıca alınır. Bir hizmetin verilmesi için zorunlu olmayan pazarlama/iletişim faaliyetleri, gerekli olduğu ölçüde ayrı tercih mekanizmalarına tabi tutulur.</p>
+</section>
+<section><h2>5. Sağlık ve Vücut Kompozisyonu Verileri</h2>
+<p>Platformda boy, kilo, bel/kalça/boyun çevresi, yağ oranı, yağsız kütle, kas kütlesi, vücut kompozisyonu ölçümleri veya benzeri veriler bulunabilir. Kullanıcı bu verileri kendi isteğiyle girdiğinde veya kulüp yetkilisi yetkili bir süreç kapsamında kaydettiğinde, verinin niteliğine göre KVKK kapsamında özel koruma uygulanır.</p>
+<p>Bu veriler, fitness/performans takibi, gelişim ekranları, hedeflerin izlenmesi ve kulübün sunduğu ilgili hizmetlerin yürütülmesi amacı dışında kullanılmamalıdır. Tıbbi teşhis veya tedavi amacı taşıyan sonuçlar, kullanıcıya bu şekilde sunulmaz; hesaplama veya tahminler profesyonel sağlık değerlendirmesinin yerine geçmez.</p>
+</section>
+<section><h2>6. Verilerin Paylaşılması ve Aktarılması</h2>
+<p>Kişisel veriler, hizmetin sunulması için gerekli olduğu ölçüde ve hukuki şartlara uygun olarak aşağıdaki alıcı gruplarıyla paylaşılabilir:</p>
+<p>Kullanıcının bağlı olduğu kulüp/tesis ve bu kuruluşun yetkili çalışanları.</p>
+<p>Bulut barındırma, veritabanı, yedekleme, bildirim, hata izleme ve teknik altyapı hizmeti sağlayıcıları.</p>
+<p>Ödeme, faturalama veya muhasebe hizmeti sağlayıcıları; yalnızca ilgili işlem için gerekli kapsamda.</p>
+<p>Yetkili kamu kurumları, adli/idari makamlar ve kanunen bilgi talep etmeye yetkili kuruluşlar.</p>
+<p>Hukuki, mali veya teknik danışmanlar; gerekli ve ölçülü kapsamda.</p>
+<p>Yurt dışına veri aktarımı söz konusuysa, aktarımın yapıldığı ülke, hizmet sağlayıcı, veri kategorisi ve hukuki mekanizma; KVKK&#x27;nın güncel yurt dışına veri aktarımı hükümlerine uygun şekilde değerlendirilir ve gerekli hukuki/teknik tedbirler alınır.</p>
+</section>
+<section><h2>7. Kulüp ile Veri Paylaşımı</h2>
+<p>Bir kullanıcı bir kulübe bağlandığında; kulübün yönettiği üyelik, rezervasyon, devam, iletişim ve ilgili spor/ölçüm bilgileri, kullanıcının kulüple olan hizmet ilişkisinin yürütülmesi için kulübün yetkili personelinin erişimine açılabilir. Kulüp, kendi amaçları bakımından ayrıca veri sorumlusu olabilir ve kendi aydınlatma yükümlülüklerini yerine getirmekle sorumludur.</p>
+</section>
+<section><h2>8. Saklama Süreleri</h2>
+<p>Kişisel veriler, işleme amacının gerektirdiği süre boyunca ve ilgili mevzuatta öngörülen saklama süreleri dikkate alınarak tutulur. Üyelik sona erdiğinde veriler derhal ve otomatik olarak her sistemden silinmek zorunda olmayabilir; hukuki yükümlülükler, uyuşmazlıkların çözümü, yedekleme ve güvenlik gerekleri kapsamında mevzuata uygun sürelerle muhafaza edilebilir.</p>
+<p>Saklama süresi sona erdiğinde veriler silinir, yok edilir veya anonim hale getirilir.</p>
+</section>
+<section><h2>9. Veri Güvenliği</h2>
+<p>Yetkisiz erişimi azaltmak amacıyla erişim yetkilendirmeleri ve rol bazlı erişim kontrolleri uygulanır.</p>
+<p>Parolalar düz metin olarak saklanmamalı; güvenli ve geri döndürülemez yöntemlerle korunmalıdır.</p>
+<p>Veri aktarımında uygun şifreleme ve güvenli bağlantı yöntemleri kullanılır.</p>
+<p>Sistemlerde güvenlik, hata ve erişim kayıtları tutulabilir.</p>
+<p>Veri ihlali halinde KVKK ve ilgili ikincil mevzuat uyarınca gerekli bildirim ve müdahale süreçleri işletilir.</p>
+</section>
+<section><h2>10. Bildirimler ve Pazarlama İletişimleri</h2>
+<p>Hizmetin çalışması için zorunlu operasyonel bildirimler; ders hatırlatmaları, rezervasyon değişiklikleri, üyelik durumu ve güvenlik bildirimleri gibi amaçlarla gönderilebilir. Ticari elektronik ileti veya pazarlama amaçlı iletişimlerde ilgili mevzuat ve kullanıcının iletişim tercihleri dikkate alınır.</p>
+</section>
+<section><h2>11. Çerezler ve Benzeri Teknolojiler</h2>
+<p>Web sürümünde çerezler ve benzeri teknolojiler kullanılabilir. Zorunlu teknolojiler hizmetin çalışması için kullanılabilir; analitik, reklam veya isteğe bağlı teknolojiler kullanılması halinde gerekli bilgilendirme ve tercih mekanizmaları ayrıca sunulur.</p>
+</section>
+<section><h2>12. Çocuklar ve Veli Kullanımı</h2>
+<p>Çocuk sporcuların hesapları veli/kanuni temsilci aracılığıyla veya kulübün yetkili süreçleri üzerinden oluşturulabilir. Çocuklara ait verilerin işlenmesinde çocuğun üstün yararı, ilgili kişinin hakları ve KVKK kapsamındaki özel düzenlemeler gözetilir. Veli/kanuni temsilci, yetkili olduğu ölçüde bilgi alma ve ilgili hakları kullanma talebinde bulunabilir.</p>
+</section>
+<section><h2>13. KVKK Kapsamındaki Haklar</h2>
+<p>KVKK&#x27;nın 11. maddesi kapsamında ilgili kişi; kişisel verilerinin işlenip işlenmediğini öğrenme, işlenmişse bilgi talep etme, amacını ve amaca uygun kullanılıp kullanılmadığını öğrenme, yurt içinde/yurt dışında aktarıldığı üçüncü kişileri bilme, eksik veya yanlış işlenmişse düzeltilmesini isteme, KVKK&#x27;daki şartlar oluştuğunda silinmesini/yok edilmesini isteme, yapılan işlemlerin aktarılan üçüncü kişilere bildirilmesini isteme, münhasıran otomatik sistemlerle analiz sonucu aleyhe bir sonucun ortaya çıkmasına itiraz etme ve kanuna aykırı işleme nedeniyle zarar doğması halinde zararın giderilmesini talep etme haklarına sahiptir.</p>
+<p>Başvurular [KVKK BAŞVURU E-POSTASI] adresine veya web sitesi üzerinden, KVKK&#x27;ya uygun başvuru yöntemleri kullanılarak iletilebilir. Başvurular, mevzuatta öngörülen süre ve usuller çerçevesinde sonuçlandırılır.</p>
+</section>
+<section><h2>14. Veri Sorumlusu ve İletişim</h2>
+<p>Veri sorumlusu: Ali ÇOĞAN (Geliştirici)E-posta: dynacademy.app@gmail.comKVKK başvuru e-postası: dynacademy.app@gmail.comWeb sitesi: www.dynacademy.com.tr</p>
+</section>
+<section><h2>15. Politika Değişiklikleri</h2>
+<p>Bu metin, mevzuat, teknik altyapı veya Platform özelliklerindeki değişikliklere bağlı olarak güncellenebilir. Güncel metin uygulama veya web sitesinde yayımlandığı tarihten itibaren geçerli olur. Önemli değişikliklerde, mevzuata uygun şekilde ayrıca bilgilendirme yapılabilir.</p>
+</section>
+<section><h2>16. Yürürlük</h2>
+<p>Bu Gizlilik Politikası ve KVKK Aydınlatma Metni 5 Nisan 2026 tarihinde yürürlüğe girmiştir.</p>
+</section>
+      </article>
+    </div>
+
+    <div id="panel-agreement" class="panel" role="tabpanel" aria-labelledby="tab-agreement" hidden>
+      <article class="card">
+        <h2 class="doc-title">Üyelik ve Kullanım Sözleşmesi</h2>
+        <div class="meta"><div class="meta-item"><span class="meta-label">Yürürlük tarihi</span><span class="meta-value">5 Nisan 2026</span></div>
+<div class="meta-item"><span class="meta-label">Uygulama / Platform</span><span class="meta-value">dynacademy</span></div>
+<div class="meta-item"><span class="meta-label">Hizmet sağlayıcı</span><span class="meta-value">Ali ÇOĞAN (Geliştirici)</span></div>
+<div class="meta-item"><span class="meta-label">İletişim</span><span class="meta-value">dynacademy.app@gmail.com</span></div>
+<div class="meta-item"><span class="meta-label">Web sitesi</span><span class="meta-value">www.dynacademy.com.tr</span></div></div>
+        <section><h2>1. Sözleşmenin Konusu</h2>
+<p>İşbu Üyelik ve Kullanım Sözleşmesi, dynacademy mobil uygulaması ve web uygulamasının kullanıcılar tarafından kullanımına ilişkin şartları düzenler. Platform; spor kulüpleri, spor okulları, fitness salonları, stüdyolar ve benzeri işletmelerin üyelik, rezervasyon, antrenör, ders, devam, gelişim ve iletişim süreçlerini dijital olarak yönetmesine yardımcı olan bir yazılım hizmetidir.</p>
+<p>Kullanıcı, hesap oluşturarak veya Platformu kullanarak bu Sözleşme hükümlerini okuduğunu ve ilgili olduğu ölçüde kabul ettiğini beyan eder.</p>
+</section>
+<section><h2>2. Tanımlar</h2>
+<p>Platform: dynacademy mobil uygulaması, web uygulaması ve bunlara bağlı hizmetler.</p>
+<p>Kullanıcı: Platformu kullanan sporcu, veli, antrenör, kulüp yöneticisi, personel veya diğer yetkili kişi.</p>
+<p>Kulüp: Kullanıcının üyelik veya hizmet ilişkisi bulunan spor kulübü, salon, stüdyo, akademi veya benzeri işletme.</p>
+<p>Hizmet: Platform üzerinden sunulan üyelik, rezervasyon, ders, devam, gelişim, iletişim, bildirim ve diğer dijital fonksiyonlar.</p>
+<p>İçerik: Kullanıcı veya Kulüp tarafından Platforma yüklenen metin, görsel, video, ölçüm, program ve benzeri bilgiler.</p>
+</section>
+<section><h2>3. Hesap Oluşturma ve Kullanıcı Bilgileri</h2>
+<p>Kullanıcı kayıt sırasında doğru, güncel ve kendisine ait bilgiler vermekle yükümlüdür.</p>
+<p>Kullanıcı, hesap bilgilerinin güvenliğini sağlamak ve şifresini üçüncü kişilerle paylaşmamakla yükümlüdür.</p>
+<p>Hesabın yetkisiz kullanıldığından şüphe edilmesi halinde kullanıcı gecikmeden destek kanalı üzerinden bildirim yapmalıdır.</p>
+<p>Kullanıcı tarafından verilen bilgilerin yanlış veya güncel olmaması nedeniyle ortaya çıkan sonuçlardan, ilgili mevzuatın emredici hükümleri saklı kalmak kaydıyla, kullanıcı sorumlu olabilir.</p>
+<p>Kulüp yöneticisi tarafından oluşturulan hesaplarda, hesabın oluşturulması ve yetkilendirilmesi kulübün kendi süreçlerine göre yapılabilir.</p>
+</section>
+<section><h2>4. Kullanım Kuralları</h2>
+<p>Kullanıcı Platformu hukuka, genel ahlaka, üçüncü kişilerin haklarına ve bu Sözleşmeye uygun kullanacağını kabul eder.</p>
+<p>Başkasının hesabına yetkisiz erişmeye çalışmamak.</p>
+<p>Sistemin güvenliğini bozacak, aşırı yük oluşturacak veya hizmetin çalışmasını engelleyecek işlemler yapmamak.</p>
+<p>Virüs, kötü amaçlı yazılım veya zararlı kod yüklememek.</p>
+<p>Başka kullanıcıların kişisel verilerini yetkisiz biçimde toplamak, paylaşmak veya kullanmamak.</p>
+<p>Platformun kaynak kodunu, tasarımını veya güvenlik mekanizmalarını izinsiz kopyalamamak, değiştirmemek veya tersine mühendislik yapmamak; yürürlükteki emredici mevzuatın izin verdiği haller saklıdır.</p>
+<p>Platform üzerinden hukuka aykırı, yanıltıcı, hakaret içeren veya üçüncü kişilerin fikri mülkiyet haklarını ihlal eden içerik paylaşmamak.</p>
+</section>
+<section><h2>5. Kulüp Hizmetleri ve Üyelikler</h2>
+<p>dynacademy, kulüplerin kendi üyelerine sunduğu hizmetleri dijital olarak yönetmesine aracılık eden bir yazılım platformudur. Ders, üyelik paketi, ücret, rezervasyon, iptal, dondurma, iade, kontenjan ve kulüp içi kullanım kuralları ilgili kulüp tarafından belirlenebilir.</p>
+<p>Kullanıcının bir kulüple yaptığı spor hizmeti/üyelik sözleşmesi ile dynacademy Platformuna ilişkin bu Sözleşme birbirinden ayrı olabilir. Kulübün kendi üyelik sözleşmesi veya özel koşulları varsa, ilgili hizmet bakımından bunlar ayrıca kullanıcıya sunulur.</p>
+</section>
+<section><h2>6. Rezervasyon, Ders ve Devam Kuralları</h2>
+<p>Rezervasyonların yapılması, değiştirilmesi ve iptali ilgili kulübün belirlediği kurallara tabidir.</p>
+<p>Kontenjan, ders süresi, eğitmen uygunluğu ve şube kapasitesi gibi bilgiler Platformda gösterilebilir; güncel bilgi kulübün operasyonel kayıtlarıyla birlikte değerlendirilir.</p>
+<p>Kullanıcının rezervasyon saatine uymaması veya geç iptal etmesi halinde kulüp tarafından önceden ilan edilmiş kurallar uygulanabilir.</p>
+<p>Teknik bir hata nedeniyle rezervasyon oluşmaması veya değişmesi halinde kullanıcı destek kanalından ve gerekiyorsa doğrudan kulüpten bilgi almalıdır.</p>
+</section>
+<section><h2>7. Ödeme ve Ücretler</h2>
+<p>Platform üzerinde ücretli bir hizmet veya üyelik satın alınması halinde fiyat, ödeme planı, vade, yenileme, iptal ve iade şartları satın alma ekranında veya ilgili kulübün sözleşmesinde açıkça belirtilir.</p>
+<p>Ödeme işlemlerinde üçüncü taraf ödeme kuruluşları kullanılabilir. Kart bilgileri gibi ödeme kuruluşunun doğrudan işlemesi gereken bilgiler Platform tarafından tutulmayabilir. Kullanıcı, ödeme ekranında sunulan şartları ve ilgili ödeme sağlayıcısının koşullarını da incelemekle yükümlüdür.</p>
+<p>Tüketici mevzuatından doğan emredici haklar saklıdır.</p>
+</section>
+<section><h2>8. İletişim ve Bildirimler</h2>
+<p>Platform; rezervasyon, ders, üyelik, ödeme, güvenlik ve benzeri hizmet bildirimleri gönderebilir. Kullanıcı, zorunlu hizmet bildirimlerinin Platformun kullanılabilmesi için gerekli olabileceğini kabul eder. Ticari elektronik ileti ve pazarlama iletişimleri bakımından ilgili mevzuat ve kullanıcının tercihleri uygulanır.</p>
+</section>
+<section><h2>9. Spor, Antrenman ve Sağlık Bilgileri Hakkında Sorumluluk</h2>
+<p>Platformda antrenman programları, egzersiz kayıtları, vücut kompozisyonu hesaplamaları, hedefler ve benzeri bilgiler gösterilebilir. Bu bilgiler genel fitness ve takip amaçlıdır; tıbbi teşhis, tedavi veya profesyonel sağlık değerlendirmesinin yerine geçmez.</p>
+<p>Kullanıcı; egzersize başlamadan önce kendi sağlık durumunu dikkate almak ve gerekli gördüğünde hekim veya uygun sağlık profesyonelinden görüş almakla sorumludur. Platformdaki bir hesaplama veya önerinin tek başına tıbbi karar verme aracı olarak kullanılmaması gerekir.</p>
+<p>Acil sağlık durumlarında Platform veya antrenör yerine 112 Acil Çağrı Merkezi ve uygun sağlık hizmetleri kullanılmalıdır.</p>
+</section>
+<section><h2>10. Kullanıcı İçeriği</h2>
+<p>Kullanıcının Platforma yüklediği fotoğraf, video, metin veya diğer içeriklerin hukuka uygun olmasından ve gerekli izinlerin alınmış olmasından kullanıcı sorumludur. Kullanıcı, üçüncü kişilere ait içerikleri gerekli hak veya izin olmadan yüklememelidir.</p>
+<p>Kullanıcı içeriğinin Platformda saklanması ve ilgili kulüp personeline gösterilmesi, hizmetin gerektirdiği ölçüde ve Gizlilik Politikası&#x27;nda belirtilen esaslar çerçevesinde gerçekleştirilir.</p>
+</section>
+<section><h2>11. Fikri Mülkiyet</h2>
+<p>Platformun yazılımı, marka adı, logo, arayüz tasarımı, özgün grafikler, metinler ve Platform tarafından oluşturulan diğer unsurlar üzerindeki fikri mülkiyet hakları Geliştirici’ye aittir. Kullanıcıya yalnızca Sözleşme süresince, kişisel ve hizmet amacıyla kullanım için sınırlı, devredilemez ve münhasır olmayan bir kullanım hakkı verilir.</p>
+<p>Kullanıcı veya Kulüp tarafından Platforma yüklenen içeriklerin mülkiyeti kural olarak içerik sahibinde kalır; ancak hizmetin sunulması için gerekli teknik kullanım ve barındırma hakkı, ilgili mevzuat ve Gizlilik Politikası sınırları içinde Platforma tanınmış sayılır.</p>
+</section>
+<section><h2>12. Platformun Kullanılabilirliği</h2>
+<p>Platformun bakım, güncelleme, güvenlik müdahalesi, üçüncü taraf altyapı arızası, internet kesintisi veya mücbir sebep gibi nedenlerle geçici olarak kullanılamaması mümkündür. Geliştirici, makul ölçüde hizmet sürekliliğini sağlamaya çalışır.</p>
+<p>Platformda gösterilen üçüncü taraf hizmetlerin veya kulüp operasyonlarının her zaman kesintisiz ve hatasız olacağı garanti edilmez.</p>
+</section>
+<section><h2>13. Hesabın Askıya Alınması ve Sona Erdirilmesi</h2>
+<p>Kullanıcının bu Sözleşmeye veya yürürlükteki mevzuata aykırı davranması, güvenlik riski oluşturması veya hesabın kötüye kullanılması halinde, gerekli olduğu ölçüde hesap geçici olarak sınırlandırılabilir veya askıya alınabilir.</p>
+<p>Kullanıcı hesabını kapatmak için [dynacademy.app@gmail.com] üzerinden talepte bulunabilir veya Platformda sunulan hesap silme fonksiyonunu kullanabilir. Hesabın silinmesi, kanunen saklanması gereken kayıtların derhal yok edilmesini gerektirmez.</p>
+</section>
+<section><h2>14. Kişisel Verilerin Korunması</h2>
+<p>Kişisel verilerin işlenmesine ilişkin esaslar dynacademy Gizlilik Politikası ve KVKK Aydınlatma Metni&#x27;nde açıklanmıştır. Kullanıcı, Platformu kullanmadan önce bu metni inceleyebilir.</p>
+<p>Kullanıcının kişisel verilerinin işlenmesi, bu Sözleşmenin kabulünden bağımsız olarak KVKK ve ilgili mevzuatta öngörülen hukuki sebepler ve gerekli durumlarda açık rıza süreçleri çerçevesinde yürütülür.</p>
+</section>
+<section><h2>15. Değişiklikler</h2>
+<p>Platform özellikleri ve bu Sözleşme zaman içinde güncellenebilir. Mevzuat veya hizmet modelindeki değişiklikler nedeniyle yapılan güncellemeler Platformda yayımlanır. Kullanıcının haklarını önemli ölçüde etkileyen değişikliklerde, mevzuata uygun bilgilendirme yapılır.</p>
+<p>Güncelleme sonrasında Platformu kullanmaya devam etmek, değişikliklerin yürürlükte olduğu ölçüde yeni şartların kabulü olarak değerlendirilebilir; ancak tüketici mevzuatından doğan emredici haklar saklıdır.</p>
+</section>
+<section><h2>16. Sorumluluğun Kapsamı</h2>
+<p>Tarafların emredici mevzuattan doğan sorumlulukları saklıdır. Geliştirici, Platformun sunduğu dijital hizmeti makul güvenlik ve teknik standartlara uygun biçimde işletmek için gerekli çabayı gösterir. Kullanıcının kendi hesabını veya kimlik bilgilerini üçüncü kişilerle paylaşmasından kaynaklanan riskler kullanıcıya ait olabilir.</p>
+<p>Kulüp tarafından sunulan fiziksel spor hizmeti, antrenörlük hizmeti, tesis güvenliği, üyelik koşulları, ücretlendirme ve kulüp personelinin eylemleri bakımından, ilgili hizmetin sağlayıcısı olan kulübün kendi hukuki sorumluluğu ayrıca değerlendirilir.</p>
+</section>
+<section><h2>17. Uygulanacak Hukuk ve Uyuşmazlıklar</h2>
+<p>İşbu Sözleşmeye Türk hukuku uygulanır. Tüketici işlemlerinde, tüketicinin emredici mevzuattan doğan hakları saklıdır. İşbu Sözleşmeden doğabilecek uyuşmazlıklarda, mevzuatın görev ve yetki kuralları saklı kalmak kaydıyla Samsun Mahkemeleri ve İcra Daireleri yetkilidir.</p>
+</section>
+<section><h2>18. İletişim</h2>
+<p>dynacademy destek ve iletişim bilgileri:Ali ÇOĞAN “Geliştirici”dynacademy.app@gmail.comwww.dynacademy.com.tr</p>
+</section>
+<section><h2>19. Kabul ve Yürürlük</h2>
+<p>Kullanıcı, kayıt veya ilgili onay ekranında “Üyelik ve Kullanım Sözleşmesini okudum ve kabul ediyorum” benzeri açık bir onay vermesi halinde bu Sözleşmenin kendisi açısından yürürlüğe girdiğini kabul eder. Elektronik ortamda verilen onay, ilgili mevzuatın öngördüğü şartlar çerçevesinde kayıt altına alınabilir.</p>
+<p>Bu Sözleşme 5 Nisan 2026 tarihinde yürürlüğe girmiştir.</p>
+</section>
+      </article>
+    </div>
+
+    <footer>
+      İletişim: <a href="mailto:dynacademy.app@gmail.com">dynacademy.app@gmail.com</a>
+      · <a href="https://www.dynacademy.com.tr" rel="noopener">www.dynacademy.com.tr</a>
+    </footer>
+  </div>
+
+  <script>
+    (function () {
+      var tabs = Array.prototype.slice.call(document.querySelectorAll('[role="tab"]'));
+      var panels = {
+        'tab-privacy': document.getElementById('panel-privacy'),
+        'tab-agreement': document.getElementById('panel-agreement')
+      };
+
+      function activate(id) {
+        tabs.forEach(function (tab) {
+          var on = tab.id === id;
+          tab.setAttribute('aria-selected', on ? 'true' : 'false');
+        });
+        Object.keys(panels).forEach(function (key) {
+          var panel = panels[key];
+          var on = key === id;
+          panel.classList.toggle('active', on);
+          if (on) panel.removeAttribute('hidden');
+          else panel.setAttribute('hidden', '');
+        });
+        var hash = id === 'tab-agreement' ? 'sozlesme' : 'gizlilik';
+        if (history.replaceState) history.replaceState(null, '', '#' + hash);
+        else location.hash = hash;
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+
+      tabs.forEach(function (tab) {
+        tab.addEventListener('click', function () { activate(tab.id); });
+      });
+
+      var hash = (location.hash || '').replace('#', '').toLowerCase();
+      if (hash === 'sozlesme' || hash === 'uyelik' || hash === 'agreement') activate('tab-agreement');
+      else activate('tab-privacy');
+    })();
+  </script>
+</body>
+</html>
